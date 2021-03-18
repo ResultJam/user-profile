@@ -23,5 +23,5 @@
 </script>
 
 <div class="mt-20">
-  <UserProfile user={board.users[id]} {lockedBehaviors} />
+  <UserProfile user={board.users[id]} {lockedBehaviors} steps={board.steps} />
 </div>
