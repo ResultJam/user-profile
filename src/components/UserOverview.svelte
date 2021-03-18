@@ -14,13 +14,19 @@
 </script>
 
 <style>
+  .user-profile {
+    background-image: url("/static/images/user-profile-overview-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   .online {
     background: #66ef84;
   }
 </style>
 
 {#if user}
-  <div class="flex flex-col items-center w-full">
+  <div class="flex flex-col items-center w-full user-profile">
     <div class="flex flex-col items-center w-full max-w-sm text-center">
       <div class="relative w-40 h-40">
         <Avatar size={10} photo={user.photo} />
