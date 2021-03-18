@@ -46,6 +46,12 @@ module.exports = {
       fontSize: {
         xxs: '0.625rem',
       },
+      fontWeight: {
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+      },
       height: {
         'screen-75': '75vh',
       },
