@@ -45,6 +45,7 @@ module.exports = {
       },
       fontSize: {
         xxs: '0.625rem',
+        sm: '0.875rem',
       },
       fontWeight: {
         normal: 400,
