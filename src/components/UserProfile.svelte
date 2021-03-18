@@ -1,12 +1,12 @@
 <script>
+  import UserOverview from "./UserOverview.svelte";
+
   export let user
+  export let lockedBehaviors
 </script>
 
 {#if user}
-  <div>
-    <h1 class="text-center text-4xl font-display font-semibold">
-      {user.firstName}
-      {user.lastName}
-    </h1>
+  <div class="flex flex-col items-center w-full">
+    <UserOverview {user} {lockedBehaviors} />
   </div>
 {/if}
