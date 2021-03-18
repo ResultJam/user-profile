@@ -5,7 +5,6 @@
   import SubmissionTimeline from './SubmissionTimeline.svelte'
 
   export let user
-  export let lockedBehaviors
   export let steps
 
   const submissions = Object.entries(user.submissionsByStep).map(
@@ -19,6 +18,18 @@
   ).sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime() // Sort in reverse chronological order
   })
+
+  const lockedBehaviors = Object
+    .entries(steps)
+    .map(([stepId, step]) => {
+      if (!user.stepsCompleted) return {};
+      
+      const complete = !!user.stepsCompleted[stepId];
+      if (!complete) {
+        return step.unlockBehaviors.reduce((obj, next) => ({ ...obj, [next]: {  ord: step.ord, title: step.title } }), {})
+      } else return {};
+    })
+    .reduce((obj, next) => Object.assign(obj, next), {})
 </script>
 
 <style>
