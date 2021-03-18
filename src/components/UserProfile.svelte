@@ -1,6 +1,7 @@
 <script>
   import UserOverview from "./UserOverview.svelte";
   import UserSteps from "./UserSteps.svelte";
+  import UserMetrics from "./UserMetrics.svelte";
 
   export let user
   export let lockedBehaviors
@@ -12,6 +13,7 @@
     <div class="flex flex-col items-center w-full px-6 user-profile-content-container">
       <UserOverview {user} {lockedBehaviors} />
       <UserSteps {user} {steps} />
+      <UserMetrics />
     </div>
   {/if}
 </div>
