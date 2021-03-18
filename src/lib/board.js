@@ -77,7 +77,7 @@ export const board = {
       ord: 2,
       metrics: [],
       __typename: 'Step',
-      unlockBehaviors: [],
+      unlockBehaviors: ["message"],
       unlockMetrics: [],
     },
     'b4ff4e82-5884-41f6-bc00-e14c6a5556b5': {

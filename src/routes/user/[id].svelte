@@ -13,5 +13,5 @@
 </script>
 
 <div class="mt-20">
-  <UserProfile user={board.users[id]} />
+  <UserProfile user={board.users[id]} steps={board.steps} />
 </div>
