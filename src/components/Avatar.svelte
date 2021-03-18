@@ -7,7 +7,7 @@
   $: error = false
   $: url = user ? user.photo : photo
 
-  function handlError(e) {
+  function handleError(e) {
     error = true
   }
 </script>
@@ -19,7 +19,7 @@
   <img
     load="lazy"
     class="w-full h-full"
-    on:error={handlError}
+    on:error={handleError}
     src={`${
       url && !error
         ? `${url}${
